@@ -1,0 +1,5 @@
+# Aliases specific to OS X
+
+alias use_php56='brew unlink php70 && brew link php56'
+alias use_php70='brew unlink php56 && brew link php70'
+

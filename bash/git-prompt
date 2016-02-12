@@ -1,0 +1,20 @@
+# This uses the vcprompt program which can be found
+# here: https://bitbucket.org/gward/vcprompt 
+# or installed via Homebrew: brew install vcprompt
+
+function git_prompt {
+	local vcp="$(vcprompt -f '%b')"
+	if [[ -n ${vcp} ]]; then
+		local status="$(git status -b --porcelain 2> /dev/null || git status --porcelain 2> /dev/null)"
+		if [[ -n "${status}" ]] && [[ "${status}" != "\n" ]] && [[ -n "$(grep -v ^# <<< "${status}")" ]]; then
+			echo -e " (${vcp} ✗)"
+		else
+			echo -e " (${vcp} ✓)"
+		fi
+	else
+		echo -e ''
+	fi
+}
+
+PS1="\w $(vcprompt -f \"%b\")\$ "
+PS1='\033[0;32m\w\033[1;34m$(git_prompt)\033[00m \$ '

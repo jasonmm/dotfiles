@@ -46,6 +46,7 @@ export GOPATH=${HOME}/code/go
 export GOROOT=/usr/local/Cellar/go/1.5.3/libexec
 
 source ${HOME}/dotfiles/bash/git-prompt
+source ${HOME}/dotfiles/bash/git-completion
 source ${HOME}/dotfiles/bash/bash_aliases
 source ${HOME}/dotfiles/bash/bash_aliases.osx
 source ${HOME}/dotfiles/bash/current-dir-in-iterm-tab-title.sh

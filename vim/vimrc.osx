@@ -17,9 +17,14 @@ Plugin 'fatih/vim-go'
 Plugin 'majutsushi/tagbar'
 "Plugin 'Raimondi/delimitMate'
 "Plugin 'Valloric/YouCompleteMe'
-Plugin 'godlygeek/tabular'
+"Plugin 'godlygeek/tabular'
 " vim-autoclose conflicts with YouCompleteMe
 "Plugin 'Townk/vim-autoclose'
+
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-classpath'
+Plugin 'venantius/vim-cljfmt'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -134,8 +139,8 @@ au BufWritePost *.go silent! !ctags -R &
 
 " http://kennedysgarage.com/articles/nerdtree/
 " Automatically show NERDTree when Vim starts.
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
+"autocmd VimEnter * NERDTree
+"autocmd VimEnter * wincmd p
 " F2 toggles NERDTree
 map <F2> :NERDTreeToggle<CR>
 

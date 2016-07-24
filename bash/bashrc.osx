@@ -35,6 +35,9 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 # https://github.com/xvzf/vcprompt
 #export VCPROMPT_EXECUTABLE=${HOME}/.vcprompt/bin/vcprompt
 
+export GOPATH=${HOME}/code/go
+export GOROOT=/usr/local/Cellar/go/1.6/libexec
+
 #export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 export PATH=${PATH}:$HOME/bin:${GOPATH//://bin:}/bin
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
@@ -42,18 +45,18 @@ export PATH=${HOME}/.composer/vendor/bin:$PATH
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-export GOPATH=${HOME}/code/go
-export GOROOT=/usr/local/Cellar/go/1.5.3/libexec
-
-source ${HOME}/dotfiles/bash/git-prompt
+#source ${HOME}/dotfiles/bash/git-prompt
+source ${HOME}/dotfiles/bash/git-prompt-other
 source ${HOME}/dotfiles/bash/git-completion
 source ${HOME}/dotfiles/bash/bash_aliases
 source ${HOME}/dotfiles/bash/bash_aliases.osx
 source ${HOME}/dotfiles/bash/current-dir-in-iterm-tab-title.sh
 source ${HOME}/.brew-gh-api-token
+#source /usr/local/lib/dnx/bin/dnvm.sh
 
 # Load Bash It
 #export SCM_GIT_SHOW_DETAILS=false
 #source $BASH_IT/bash_it.sh
+
 
 

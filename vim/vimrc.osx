@@ -179,3 +179,7 @@ function! HasPaste()
     return ''
 endfunction
 
+"" Clojure
+" Jump to definition (requires vim-fireplace)
+map <leader>d ]<C-d>
+

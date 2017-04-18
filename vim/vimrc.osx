@@ -144,6 +144,16 @@ else
 	map <leader>/ <leader>c <CR>
 endif
 
+" Highlight the line the cursor is on when in Insert mode.
+"au InsertEnter,InsertLeave * set cursorline!
+
+" Set textwidth for markdown files.
+au FileType markdown set tw=72
+
+" http://stackoverflow.com/a/13731714
+let &colorcolumn="80,".join(range(120,999),",")
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
+
 " Open MacVim maximized.
 if has("gui_macvim")
 	set fuoptions=maxvert,maxhorz

@@ -121,6 +121,7 @@ map <leader><space> :noh<cr>
 " Convenience!
 nnoremap ; :
 inoremap jj <Esc>
+inoremap fd <Esc>
 
 " Prevents backup/swap files from being created.
 set noswapfile

@@ -1,0 +1,15 @@
+# Place the following lines in the ~/.gitconfig file under the `[alias]` heading
+#
+
+lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+lg = !"git lg1"
+co = checkout
+br = branch
+ci = commit --verbose
+cis = commit --gpg-sign --verbose
+st = status
+cim = commit -m
+addp = add --patch
+uppush = "!sh -c \"git push -u origin $(git rev-parse --abbref-ref HEAD)\""
+

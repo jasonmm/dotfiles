@@ -1,0 +1,6 @@
+# Place the following lines in the ~/.gitignore_global file.
+#
+
+*~
+.DS_Store
+.idea

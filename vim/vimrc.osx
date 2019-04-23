@@ -108,9 +108,16 @@ set statusline+=%-14.(%c%V,%l/%L%)    "Column(virtual column),line/total lines
 set statusline+=\ %<%P                "Percent through file
 
 
+
 " Change leader to the comma.
-let mapleader = ","
-let g:mapleader = ","
+"let mapleader = ","
+"let g:mapleader = ","
+
+" Change leader to SPACE (https://stackoverflow.com/a/446293).
+" Helpful when switching between Vim and Spacemacs.
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+let g:mapleader = " "
 
 
 " Wild menu configuration

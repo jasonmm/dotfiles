@@ -213,6 +213,7 @@ au BufWritePost *.go silent! !ctags -R &
 "autocmd VimEnter * wincmd p
 " F2 toggles NERDTree
 map <F2> :NERDTreeToggle<CR>
+map <leader>ft :NERDTreeToggle<CR>
 
 " Returns true if paste mode is enabled
 function! HasPaste()

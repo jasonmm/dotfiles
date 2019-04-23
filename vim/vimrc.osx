@@ -121,6 +121,17 @@ nnoremap <SPACE> <Nop>
 let mapleader = " "
 let g:mapleader = " "
 
+" Activate deoplete by default
+let g:deoplete#enable_at_startup = 1
+
+" https://medium.com/@khamer/writing-php-and-js-with-vim-in-2017-f58e4a5738ae
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+set formatoptions+=nj
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = '⚑'
+let g:ale_sign_warning = '⚐'
 
 " Wild menu configuration
 set wildmenu
@@ -157,6 +168,11 @@ set nowb
 " http://stackoverflow.com/a/594947
 set sessionoptions+=resize,winpos,winsize
 
+" Trigger configuration for UltiSnips. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 " http://stackoverflow.com/a/7078429
 cmap w!! w !sudo tee > /dev/null %
 
@@ -165,7 +181,7 @@ nnoremap <leader><F5> :source $MYVIMRC<cr>:echo 'sourced '.$MYVIMRC<cr>
 
 " Maps Command-/ to toggle comments in MacVim.
 if has("gui_macvim") && has("gui_running")
-	map <D-/> <leader>c 
+	map <D-/> <leader>c
 	imap <D-/> <ESC><leader>c <CR>i
 else
 	map <leader>/ <leader>c <CR>
@@ -189,7 +205,7 @@ if has("gui_macvim")
 endif
 
 " Update ctags for Go files: http://0value.com/my-Go-centric-Vim-setup
-au BufWritePost *.go silent! !ctags -R &	
+au BufWritePost *.go silent! !ctags -R &
 
 " http://kennedysgarage.com/articles/nerdtree/
 " Automatically show NERDTree when Vim starts.
@@ -206,7 +222,18 @@ function! HasPaste()
     return ''
 endfunction
 
+"" PHP
+" Configuration for PDV (PHP Documentor for VIM).
+let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
+nnoremap <leader>pdv :call pdv#DocumentWithSnip()<CR>
+
+" http://www.sromero.org/wiki/linux/servicios/php/vim_debug_basics
+let g:vdebug_options = {'ide_key': 'PHPSTORM'}
+let g:vdebug_options = {'break_on_open': 0}
+let g:vdebug_options = {'server': '127.0.0.1'}
+let g:vdebug_options = {'port': '9000'}
+
 "" Clojure
 " Jump to definition (requires vim-fireplace)
-map <leader>d ]<C-d>
+"map <leader>d ]<C-d>
 

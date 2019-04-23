@@ -18,25 +18,42 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-eunuch'
 Plugin 'fatih/vim-go'
-"Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-session'
+"Plugin 'xolox/vim-session'
+"Plugin 'SirVer/ultisnips'
+Plugin 'tobyS/vmustache'
+"Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-syntastic/syntastic'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
+"Plugin 'Shougo/deoplete.nvim'
 
-Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-classpath'
-Plugin 'venantius/vim-cljfmt'
-Plugin 'venantius/vim-eastwood'
+Plugin 'w0rp/ale'
 
+"" PHP
+Plugin 'joonty/vdebug'
+Plugin 'adoy/vim-php-refactoring-toolbox'
+Plugin 'tobyS/pdv'
+"Plugin 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
+
+"" Clojure
+"Plugin 'guns/vim-clojure-static'
+"Plugin 'tpope/vim-fireplace'
+"Plugin 'tpope/vim-classpath'
+"Plugin 'venantius/vim-cljfmt'
+"Plugin 'venantius/vim-eastwood'
+"Plugin 'kien/rainbow_parentheses.vim'
+
+"" Old, unused
 "Plugin 'majutsushi/tagbar'
 "Plugin 'Raimondi/delimitMate'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'godlygeek/tabular'
 " vim-autoclose conflicts with YouCompleteMe
 "Plugin 'Townk/vim-autoclose'
+" Syntastics conflicts with ale
+"Plugin 'vim-syntastic/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()

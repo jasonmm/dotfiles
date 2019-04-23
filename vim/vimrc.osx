@@ -107,7 +107,9 @@ set statusline+=%=                    "Left/right separator
 set statusline+=%-14.(%c%V,%l/%L%)    "Column(virtual column),line/total lines
 set statusline+=\ %<%P                "Percent through file
 
+" https://medium.com/@khamer/writing-php-and-js-with-vim-in-2017-f58e4a5738ae
 
+let g:markdown_fenced_languages = ['html', 'vim', 'php', 'clojure', 'cpp', 'cs', 'javascript', 'bash=sh']
 
 " Change leader to the comma.
 "let mapleader = ","

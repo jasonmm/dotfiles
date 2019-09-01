@@ -36,7 +36,8 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 #export VCPROMPT_EXECUTABLE=${HOME}/.vcprompt/bin/vcprompt
 
 export GOPATH=${HOME}/code/go
-export GOROOT=/usr/local/Cellar/go/1.6/libexec
+# GOROOT does not need to be set: https://blog.learngoprogramming.com/what-are-goroot-and-gopath-1231b084723f
+#export GOROOT=/usr/local/Cellar/go/1.6/libexec
 
 export PATH=${PATH}:$HOME/bin:${GOPATH//://bin:}/bin
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH

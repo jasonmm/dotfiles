@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 
-# Path to the bash it configuration
-#export BASH_IT=$HOME/.bash_it
-
-# Lock and Load a custom theme file
-# location /.bash_it/themes/
-#export BASH_IT_THEME='simple'
-
 # Your place for hosting Git repos. I use this for private repos.
 #export GIT_HOSTING='git@git.domain.com'
 
@@ -54,10 +47,6 @@ source ${HOME}/dotfiles/bash/bash_aliases.osx
 source ${HOME}/dotfiles/bash/current-dir-in-iterm-tab-title.sh
 source ${HOME}/.brew-gh-api-token
 #source /usr/local/lib/dnx/bin/dnvm.sh
-
-# Load Bash It
-#export SCM_GIT_SHOW_DETAILS=false
-#source $BASH_IT/bash_it.sh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "${HOME}/bin/google-cloud-sdk/path.bash.inc" ]; then source "${HOME}/bin/google-cloud-sdk/path.bash.inc"; fi

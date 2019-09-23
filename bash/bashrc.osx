@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Your place for hosting Git repos. I use this for private repos.
-#export GIT_HOSTING='git@git.domain.com'
-
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -24,10 +21,6 @@ export IRC_CLIENT='irssi'
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
-# Set vcprompt executable path for scm advance info in prompt (demula theme)
-# https://github.com/xvzf/vcprompt
-#export VCPROMPT_EXECUTABLE=${HOME}/.vcprompt/bin/vcprompt
-
 export GOPATH=${HOME}/code/go
 # GOROOT does not need to be set: https://blog.learngoprogramming.com/what-are-goroot-and-gopath-1231b084723f
 #export GOROOT=/usr/local/Cellar/go/1.6/libexec
@@ -38,6 +31,10 @@ export PATH=${HOME}/.composer/vendor/bin:$PATH
 
 #export JAVA_HOME=$(/usr/libexec/java_home)
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+
+# Set vcprompt executable path for scm advance info in prompt (demula theme)
+# https://github.com/xvzf/vcprompt
+#export VCPROMPT_EXECUTABLE=${HOME}/.vcprompt/bin/vcprompt
 
 #source ${HOME}/dotfiles/bash/git-prompt
 source ${HOME}/dotfiles/bash/git-prompt-other

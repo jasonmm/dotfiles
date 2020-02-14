@@ -37,3 +37,4 @@ alias ll='ls -lAhGp'
 
 alias pcf=phpCsFixer
 
+alias lz=lazygit

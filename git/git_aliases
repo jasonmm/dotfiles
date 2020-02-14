@@ -6,6 +6,7 @@ lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(
 lg = !"git lg1"
 co = checkout
 br = branch
+nb = checkout -b
 ci = commit --verbose
 cis = commit --gpg-sign --verbose
 st = status

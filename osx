@@ -99,6 +99,9 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
+## From https://forums.macrumors.com/threads/solved-prevent-hidden-files-creation-on-usb-drives.2022099/post-24077564
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
